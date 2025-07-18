@@ -8,7 +8,7 @@ export class ToyotaPage{
     private readonly inputModel : Locator
     
     constructor(page:Page){
-        this.loginButton=page.locator('button[id=\'button-57210e227b\']')
+        this.loginButton=page.locator('button[id=\'button-\']')
         this.inputModel=page.locator('//*[@id="container-6fd65c196d"]/div/div/div[2]/div/section/div/input')
     }
 
