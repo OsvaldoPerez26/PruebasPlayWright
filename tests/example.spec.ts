@@ -44,7 +44,7 @@ test('test personal', async ({ page }) => {
   //await page.pause();
   await page.waitForTimeout(5000); 
   await ToyotaPage1.clickButton()
-  await ToyotaPage1.fillModel("Rav4")
+  await ToyotaPage1.fillModel("Rav44")
   //await page.locator('button[id=\'button-57210e227b\']').click()
   await page.screenshot({path:'screenshots/login2.png', fullPage:true})
   //await page.locator('//*[@id="container-6fd65c196d"]/div/div/div[2]/div/section/div/input').fill("Rav4")
