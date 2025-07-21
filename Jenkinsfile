@@ -43,7 +43,7 @@ pipeline {
             //sh 'npx playwright show-report'
         //}
         always {
-      archiveArtifacts artifacts: 'test-results/**/*.webm', fingerprint: true
+      archiveArtifacts artifacts: 'test-results/*.webm', fingerprint: true
     }
         failure {
             mail to: 'osvaldo.perez@itw.mx',
