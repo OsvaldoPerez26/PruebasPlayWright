@@ -40,7 +40,7 @@ pipeline {
     post {
         always {
             // Generar y publicar reporte HTML de Playwright si lo tienes habilitado
-            sh 'npx playwright show-report'
+            sh 'npx playwright test --reporter=html'
         }
         failure {
             mail to: 'osvaldo.perez@itw.mx',
