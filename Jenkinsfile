@@ -38,10 +38,10 @@ pipeline {
     }
 
     post {
-        always {
+        //always {
             // Generar y publicar reporte HTML de Playwright si lo tienes habilitado
             //sh 'npx playwright show-report'
-        }
+        //}
         failure {
             mail to: 'osvaldo.perez@itw.mx',
                  subject: "Playwright Tests Failed in ${env.JOB_NAME} #${env.BUILD_NUMBER}",
