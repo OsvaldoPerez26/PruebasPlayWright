@@ -1,5 +1,7 @@
 import { test, expect } from '@playwright/test';
 import { ToyotaPage } from './pageObjects/ToyotaPage';
+import fs from 'fs'
+const stepsLog=[];
 
 test.use({headless:false});
 test('has title', async ({ page }) => {
@@ -46,7 +48,8 @@ test('test personal', async ({ page }) => {
   await ToyotaPage1.clickButton()
   await ToyotaPage1.fillModel("Rav4")
   //await page.locator('button[id=\'button-57210e227b\']').click()
-  await page.screenshot({path:'screenshots/login2.png', fullPage:true})
+  await page.screenshot({path:'screenshots/login2.png', fullPage:false})
+  stepsLog.push({description: 'Navegar a Rav4', image:'screenshots/login2.png'});
   //await page.locator('//*[@id="container-6fd65c196d"]/div/div/div[2]/div/section/div/input').fill("Rav4")
   await page.locator('//*[@id="container-6fd65c196d"]/div/div/div[2]/div/section/div/button').click()
   await expect(page.locator('//*[@id="container-db33540857"]/div/div/div/div[1]/div[1]/h2')).toHaveText('Hemos encontrado estos resultados para "Rav4"')
@@ -67,7 +70,7 @@ test('test personal', async ({ page }) => {
 
   await page.waitForTimeout(5000); 
 
-
+  fs.writeFileSync("test-steps.json", JSON.stringify(stepsLog,null,2));
 });
 
 test('test Table', async ({page})=>{
@@ -92,6 +95,8 @@ test('test Table', async ({page})=>{
   for (let mod of models){
     console.log(mod)
   }
+  await page.screenshot({path:'screenshots/tablaKia.png', fullPage:false})
+  stepsLog.push({description: 'Navegar a Rav4', image:'screenshots/tablaKia.png'});
 
   const row1= rows.at(1);
   const firstPayment= await row1?.locator('xpath=.//td[3]').innerText()
@@ -106,7 +111,7 @@ test('test Table', async ({page})=>{
     tercero:string
   }
 
-
+  fs.writeFileSync("test-steps.json", JSON.stringify(stepsLog,null,2));
 
 });
 

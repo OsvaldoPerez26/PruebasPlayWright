@@ -30,8 +30,8 @@ export default defineConfig({
   reporter: 'html',
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
-    headless: false,
-    video:'on',
+    headless: false, // ayuda a que el video tenga más contenido útil
+    viewport: { width: 1280, height: 720 },
     
     /* Base URL to use in actions like `await page.goto('/')`. */
     // baseURL: 'http://localhost:3000',
@@ -46,8 +46,15 @@ export default defineConfig({
   projects: [
     {
       name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
+      use: {
+        headless: false,
+        viewport: null,
+        launchOptions: {
+          args: ['--start-maximized'],
+        },
     },
+  }
+
 
     // {
     //   name: 'firefox',
