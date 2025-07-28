@@ -26,7 +26,7 @@ pipeline {
 
         stage('Run Playwright Tests') {
             steps {
-                sh 'npx playwright test -g "test personal"'
+                sh 'npm run run-personal-and-doc "testPOC"'
             }
         }
 
