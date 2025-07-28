@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-test.use({headless:false});
+test.use({headless:true});
 test('test2', async ({ page }) => {
   await page.goto('https://www.geelymexico.com/');
   await page.getByRole('button', { name: 'Aceptar' }).click();

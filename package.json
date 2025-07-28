@@ -4,7 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test:headed": "playwright test --headed"
+    "test-personal": "npx playwright test -g ",
+    "generate-doc": "node utils/generate-word-report.js",
+    "test:headed": "playwright test --headed",
+    "run-personal-and-doc": "node utils/run-personal-and-doc.js"
+
   },
   "keywords": [],
   "author": "",
@@ -14,5 +18,9 @@
     "@playwright/test": "^1.53.1",
     "@types/node": "^24.0.6",
     "dotenv": "^17.0.0"
+  },
+  "dependencies": {
+    "docx": "^9.5.1"
   }
+ 
 }
