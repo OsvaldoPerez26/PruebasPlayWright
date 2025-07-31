@@ -1,0 +1,66 @@
+[
+  {
+    "description": "Se ingresa al login y se ingresan datos de manera correcta",
+    "image": "screenshots/login.png"
+  },
+  {
+    "description": "Se ingresa de manera correcta a plataforma",
+    "image": "screenshots/loginSucces.png"
+  },
+  {
+    "description": "Se busca la opcion de agregar nuevo empleado",
+    "image": "screenshots/alta.png"
+  },
+  {
+    "description": "Se visualiza los datos de contratación",
+    "image": "screenshots/alta1.png"
+  },
+  {
+    "description": "Se introducen todos los campos de tipo de contratacion",
+    "image": "screenshots/alta2.png"
+  },
+  {
+    "description": "Se ingresa de forma correcta el nombre y apellido",
+    "image": "screenshots/alta3.png"
+  },
+  {
+    "description": "Se ingresa de manera correcta fecha de nacimiento, entidad federativa",
+    "image": "screenshots/alta4.png"
+  },
+  {
+    "description": "Se ingresa de manera correcta el id del personal y el nombre de usuario",
+    "image": "screenshots/alta5.png"
+  },
+  {
+    "description": "Se elimina la informacion del",
+    "image": "screenshots/alta6.png"
+  },
+  {
+    "description": "Se ingresa de manera correcta el nombre preferido, nacionalidad, sexo",
+    "image": "screenshots/alta7.png"
+  },
+  {
+    "description": "Se agregan los correos electronicos",
+    "image": "screenshots/alta8.png"
+  },
+  {
+    "description": "Se agregan los datos demograficos del colaborador",
+    "image": "screenshots/alta9.png"
+  },
+  {
+    "description": "Se agrega de manera correcta el contacto de emergencia",
+    "image": "screenshots/alta10.png"
+  },
+  {
+    "description": "Se agrega el puesto a ocupar <Posicion>",
+    "image": "screenshots/alta11.png"
+  },
+  {
+    "description": "Se asigna un sueldo mensual",
+    "image": "screenshots/alta12.png"
+  },
+  {
+    "description": "Se dio de alta el colaborador correctamente",
+    "image": "screenshots/alta13.png"
+  }
+]
